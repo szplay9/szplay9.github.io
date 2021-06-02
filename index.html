@@ -1,8 +1,51 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>神州玩志</title>
 </head>
 <body>
-  <h1>神州玩志</h1>
+  <div>
+     <h1 id="web" onclick="jump_web()"></h1>
+  </div>
+  <div>
+     <h1 id="tel" onclick="jump_tel()"></h1>
+  </div>
+  
+  <script type="text/javascript">
+    
+     const array_http = [];
+     array_http.push('ht');
+     array_http.push('tp');
+     array_http.push('s:');
+     array_http.push('//');
+    
+     const array_web = [];
+     array_web.push('gmg991');
+     array_web.push('github');
+     array_web.push('io');    
+    
+     const array_tel = [];
+     array_tel.push('t.me');
+     array_tel.push('s');
+     array_tel.push('gmg999ch');
+     
+     const web = document.getElementById('web');
+     const tel = document.getElementById('tel');
+    
+     web.innerText = '网址 点我跳转 ' + array_web.join('.');
+     tel.innerText = '电报 点我跳转 ' + array_tel.join('/');
+    
+     function jump_web() {       
+       window.location.href = array_http.join('') + array_web.join('.');
+     }
+    
+     function jump_tel() {       
+       window.location.href = array_http.join('') + array_tel.join('/');
+     }
+    
+  </script>  
 </body>
+  
+  
 </html>
+
